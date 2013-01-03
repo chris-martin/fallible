@@ -21,7 +21,7 @@ sealed abstract class Fallible[+A, +E] {
     */
   def toOption: Option[A] =
     this match {
-      case Success(x) => Option(x)
+      case Success(x) => Some(x)
       case Failure(_) => None
     }
 
