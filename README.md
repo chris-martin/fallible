@@ -48,3 +48,17 @@ println(halve("7") || halve("8") || halve("9") || halve("10"))
 println(halve("7") && halve("8") && halve("pie") && halve("10"))
 
 ```
+
+Download
+--------
+
+Fallible is available from Maven Central.
+The latest version is 1.0.
+
+```xml
+<dependency>
+  <groupId>org.codeswarm</groupId>
+  <artifactId>fallible_2.9.2</artifactId>
+  <version>1.0</version>
+</dependency>
+```
