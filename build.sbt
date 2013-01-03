@@ -20,8 +20,7 @@ publishTo <<= version { (v: String) =>
   val nexus = "https://oss.sonatype.org/"
   Some(
   if (v.trim.endsWith("SNAPSHOT"))
-    //"snapshots" at nexus + "content/repositories/snapshots"
-    Resolver.file("file", new File(Path.userHome.absolutePath+"/.m2/repository"))
+    "snapshots" at nexus + "content/repositories/snapshots"
   else
     "releases" at nexus + "service/local/staging/deploy/maven2"
   )
