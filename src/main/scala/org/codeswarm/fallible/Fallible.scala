@@ -46,7 +46,7 @@ sealed abstract class Fallible[+A, +E] {
 
   /** Returns the result of applying `f` to this object's value if this is an instance of `Success`.
     */
-  def map[B, F >: E](f: A => B): Fallible[B, F] =
+  def map[B, E1 >: E](f: A => B): Fallible[B, E1] =
     this match {
       case Success(x) => Success(f(x))
       case Failure(e) => Failure(e)
@@ -58,7 +58,7 @@ sealed abstract class Fallible[+A, +E] {
     * The resulting object will be an instance of `Success` if and only if
     * both this and the transformation result are instances of `Success`.
     */
-  def flatMap[B, F >: E](f: A => Fallible[B, F]): Fallible[B, F] =
+  def flatMap[B, E1 >: E](f: A => Fallible[B, E1]): Fallible[B, E1] =
     this match {
       case Success(x) => f(x)
       case Failure(e) => Failure(e)
@@ -66,7 +66,7 @@ sealed abstract class Fallible[+A, +E] {
 
   /** Returns the result of applying `f` to each error.
     */
-  def mapError[F](f: E => F): Fallible[A, F] =
+  def mapError[E1](f: E => E1): Fallible[A, E1] =
     this match {
       case Success(x) => Success(x)
       case Failure(e) => Failure(e map f)
