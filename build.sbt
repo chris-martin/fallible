@@ -1,6 +1,6 @@
 name := "fallible"
 
-version := "1.0-SNAPSHOT"
+version := "1.0"
 
 scalaVersion := "2.9.2"
 
