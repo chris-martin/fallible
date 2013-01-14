@@ -2,7 +2,7 @@ name := "fallible"
 
 version := "1.1-SNAPSHOT"
 
-scalaVersion := "2.9.2"
+scalaVersion := "2.10.0"
 
 organization := "org.codeswarm"
 
@@ -43,4 +43,4 @@ pomExtra := {
   </developers>
 }
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "1.8" % "test"
+libraryDependencies += "org.scalatest" %% "scalatest" % "1.9.1" % "test"
