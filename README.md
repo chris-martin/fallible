@@ -53,7 +53,14 @@ Download
 --------
 
 Fallible is available from Maven Central.
-The latest version is 1.0.
+
+```xml
+<dependency>
+  <groupId>org.codeswarm</groupId>
+  <artifactId>fallible_2.10</artifactId>
+  <version>1.1</version>
+</dependency>
+```
 
 ```xml
 <dependency>
